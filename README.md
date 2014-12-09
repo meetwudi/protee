@@ -24,6 +24,8 @@ Make sure to include protee after jQuery.
 <script src="path/to/protee.js"></script>
 ```
 
+Be sure to serve all assets (including html) with a static server.
+
 ### Usage
 
 ##### Repeating DOM
@@ -72,24 +74,47 @@ Generated html will be
 </div>
 ```
 
-Specifing `data-protee-include-replace` will replace the container DOM.
+##### Generate lorem
 
 ```html
-<!-- /host.html -->
-<div data-protee-include="include.html"></div>
-
-<!-- /include.html -->
-<h1>Hello</h1>
+<p data-protee-lorem></p>
 ```
 
-Generated html will be
+Generated html
 
 ```html
-<!-- /host.html -->
-<h1>Hello</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta necessitatibus, eveniet magnam iste labore. Doloremque accusantium illum voluptate fuga architecto dolores! Eum aut eos facere illum facilis possimus expedita sint!</p>
 ```
 
+Lorem in different language
+
+```html
+<p data-protee-lorem="zh_CN"></p>
+```
+
+Generated html
+
+```html
+<p>他思车连龙所什机金，之严先角去品资政，动响询七号命家。花应少住积很必速，求那却红交周十，法杏辅对置置。东却局相必回照内世而容少教层，极层百县还铁9七需非容斗。 江花重积走系有社性包，者省最八会林工权参，之养蠢弦些你僚伯。圆收运石精光复转几员问，革类年共生做活育易，事展届包足往复加雪。</p>
+```
+
+Currently supported languages are
+
+1. English
+2. Chinese simplified
 
 ### Browser Support
 
 Hey! Remember, you are prototyping! So just use cutting-edge modern browsers! :)
+
+### Contribute
+
+Your contribution will be appreciated! :)
+
+- submit issue
+- fork
+- send pull request
+
+### LICENSE
+MIT
+
