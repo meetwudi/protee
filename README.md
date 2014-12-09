@@ -103,6 +103,32 @@ Currently supported languages are
 1. English
 2. Chinese simplified
 
+##### Generate placeholder image
+
+Protee uses [placehold.it](http://placehold.it) to generate image placeholders. Simply use `data-protee-imgholder`.
+
+```html
+<img data-protee-imgholder></img>
+```
+
+By default the image will be 150x150.
+
+```html
+<img src="http://placehold.it/150x150"></img>
+```
+
+You can specify any dimension you like.
+
+```html
+<img data-protee-imgholder="321x123"></img>
+```
+
+Generated html
+
+```html
+<img src="http://placehold.it/321x123"></img>
+```
+
 ### Browser Support
 
 Hey! Remember, you are prototyping! So just use cutting-edge modern browsers! :)

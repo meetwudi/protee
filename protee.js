@@ -96,3 +96,21 @@ $(window).bind('load refresh', function() {
     $el.html(LOREM_DICT[language]);
   });
 });
+
+$(window).bind('load refresh', function() {
+  /**
+   * Generate placeholder image
+   */
+  var ATTR = 'data-protee-imgholder',
+    SELECTOR = 'img[' + ATTR + ']',
+    baseUrl = 'http://placehold.it/';
+  $(SELECTOR).each(function() {
+    var size = '150x150',
+      $el = $(this);
+    if (!!$el.attr(ATTR)) {
+      size = $el.attr(ATTR);
+    }
+    $(this).attr('src', baseUrl + size);
+    $el.removeAttr(ATTR);
+  });
+});
