@@ -19,32 +19,31 @@ $(window).bind('load refresh', function() {
   // 
   // In each step, we include exactly one external HTML. Others will be resolved
   // when the `refresh` event on window is triggered, then the step will run again.
-  function step() {
-    if ($(SELECTOR).length === 0) {
-      // all done
-      return;
-    }
-
-    $(SELECTOR).each(function() {
-      $el = $(this);
-      if ($el.children(SELECTOR).length > 0) {
-        // has children with `data-protee-include` property, skip
-        return;
-      }
-      var filepath = $el.attr(ATTR);
-      $el.removeAttr(ATTR);
-      $.ajax({
-        url: filepath,
-        success: function(data) {
-          $el.html(data);
-          // Rerun all actions when new html file is included
-          $(window).trigger('refresh');
-        }
-      });
-    });
+  if ($(SELECTOR).length === 0) {
+    // all done
+    return;
   }
 
-  step();
+  $(SELECTOR).each(function() {
+    $el = $(this);
+    if ($el.children(SELECTOR).length > 0) {
+      // has children with `data-protee-include` property, skip
+      return;
+    }
+    var filepath = $el.attr(ATTR);
+    $el.removeAttr(ATTR);
+    $.ajax({
+      url: filepath,
+      success: function(data) {
+        console.log(data);
+        $el.html(data);
+        // Rerun all actions when new html file is included
+        $(window).trigger('refresh');
+      }
+    });
+    // Prevent following calls
+    return false;
+  });
 });
 
 $(window).bind('load refresh', function() {
