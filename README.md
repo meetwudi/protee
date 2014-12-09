@@ -1,8 +1,6 @@
 Protee
 ======
 
-**Protee** is under early-stage development.
-
 **Protee** is a designer-friendly javascript library for fast prototyping. It is helpful when you want to build an interactive prototype. 
 
 Protee covers common prototyping needs like repeating DOM several times, including another HTML file. It does not need any JavaScript programming experience, which is good for designers who know HTML/CSS but struggle with JS :)
