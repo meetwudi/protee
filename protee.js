@@ -35,7 +35,6 @@ $(window).bind('load refresh', function() {
     $.ajax({
       url: filepath,
       success: function(data) {
-        console.log(data);
         $el.html(data);
         // Rerun all actions when new html file is included
         $(window).trigger('refresh');
