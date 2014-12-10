@@ -8,7 +8,11 @@
   "description": "A designer-friendly javascript library for fast prototyping",
   "main": "protee.js",
   "keywords": [
-    "prototyping"
+    "prototyping",
+    "protee",
+    "fast",
+    "prototype",
+    "designer-friendly"
   ],
   "license": "MIT",
   "ignore": [
